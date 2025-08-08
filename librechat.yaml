@@ -28,8 +28,9 @@ ui:
   multiConvo: true
   agents: true
 
+# ✅ MCP server name must match exactly in mcpServer field below
 mcpServers:
-  perfect-docstudio:
+  perfectdocstudio:
     type: streamable-http
     url: "https://98663484a11c.ngrok-free.app/api/v1/mcp/RqZZ4AT9wQWkhF8CCdaEf/sse"
     timeout: 30000
@@ -48,7 +49,8 @@ endpoints:
     defaultAgents:
       - name: "DocStudio Agent"
         description: "Test MCP agent connected to PerfectDocStudio"
-        mcpServer: perfect-docstudio
+        # ✅ Must match key under mcpServers exactly
+        mcpServer: perfectdocstudio
         instructions: |
           This agent communicates with the PerfectDocStudio MCP server.
           You can request template fetching, document generation, and dataset validation.
