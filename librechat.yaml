@@ -4,18 +4,6 @@ cache: true
 interface:
   customWelcome: "Welcome to LibreChat! Enjoy your experience."
   fileSearch: true
-  privacyPolicy:
-    externalUrl: "https://librechat.ai/privacy-policy"
-    openNewTab: true
-  termsOfService:
-    externalUrl: "https://librechat.ai/tos"
-    openNewTab: true
-    modalAcceptance: true
-    modalTitle: "Terms of Service for LibreChat"
-    modalContent: |
-      # Terms and Conditions for LibreChat
-      *Effective Date: February 18, 2024*
-      These are example terms...
 
 ui:
   endpointsMenu: true
@@ -29,7 +17,7 @@ ui:
   agents: true
 
 mcpServers:
-  perfectdocstudio:
+  perfectdocstudio: # 🔹 Must match in defaultAgents
     type: streamable-http
     url: "https://aabb5fccfe28.ngrok-free.app/api/v1/mcp/RqZZ4AT9wQWkhF8CCdaEf/sse"
     timeout: 30000
@@ -38,20 +26,18 @@ mcpServers:
 endpoints:
   agents:
     recursionLimit: 25
-    maxRecursionLimit: 50
-    disableBuilder: false
     capabilities:
       - execute_code
       - file_search
       - actions
       - tools
     defaultAgents:
-      - name: "DocStudio Agent"
-        description: "Test MCP agent connected to PerfectDocStudio"
+      - name: "PerfectDocStudio Agent"
+        description: "Connects to PerfectDocStudio MCP Server for templates & document generation."
         mcpServer: perfectdocstudio
         instructions: |
-          This agent communicates with the PerfectDocStudio MCP server.
-          You can request template fetching, document generation, and dataset validation.
+          This agent is linked to the PerfectDocStudio MCP server.
+          Use it to fetch templates, generate documents, and validate datasets.
 
 actions:
   allowedDomains:
