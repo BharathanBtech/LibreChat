@@ -5,10 +5,10 @@ interface:
   customWelcome: "Welcome to LibreChat! Enjoy your experience."
   fileSearch: true
   privacyPolicy:
-    externalUrl: 'https://librechat.ai/privacy-policy'
+    externalUrl: "https://librechat.ai/privacy-policy"
     openNewTab: true
   termsOfService:
-    externalUrl: 'https://librechat.ai/tos'
+    externalUrl: "https://librechat.ai/tos"
     openNewTab: true
     modalAcceptance: true
     modalTitle: "Terms of Service for LibreChat"
@@ -28,7 +28,6 @@ ui:
   multiConvo: true
   agents: true
 
-# ✅ MCP server name must match exactly in mcpServer field below
 mcpServers:
   perfectdocstudio:
     type: streamable-http
@@ -49,7 +48,6 @@ endpoints:
     defaultAgents:
       - name: "DocStudio Agent"
         description: "Test MCP agent connected to PerfectDocStudio"
-        # ✅ Must match key under mcpServers exactly
         mcpServer: perfectdocstudio
         instructions: |
           This agent communicates with the PerfectDocStudio MCP server.
