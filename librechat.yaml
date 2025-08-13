@@ -25,7 +25,7 @@ mcpServers:
 
 endpoints:
   agents:
-    enable: true   # ✅ MUST BE ADDED
+    enable: true   
     recursionLimit: 25
     capabilities:
       - execute_code
