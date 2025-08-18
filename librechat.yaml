@@ -19,7 +19,7 @@ ui:
 mcpServers:
   perfectdocstudio:
     type: streamable-http
-    url: "https://fe67953ab009.ngrok-free.app/api/v1/mcp/RqZZ4AT9wQWkhF8CCdaEf/sse"
+    url: "https://4d7b33184150.ngrok-free.app/api/v1/mcp/RqZZ4AT9wQWkhF8CCdaEf/sse"
     timeout: 30000
     serverInstructions: true
 
